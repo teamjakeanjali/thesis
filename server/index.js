@@ -31,6 +31,7 @@ const convertAudio = inputStream => {
 };
 
 app.post("/audio", function(req, res) {
+  // convertAudio();
   // function syncRecognize(filename, encoding, sampleRateHertz, languageCode) {
   // [START speech_sync_recognize]
   // Imports the Google Cloud client library
@@ -38,9 +39,6 @@ app.post("/audio", function(req, res) {
   // Creates a client
   const client = new speech.SpeechClient();
 
-  /**
-   * TODO(developer): Uncomment the following lines before running the sample.
-   */
   const filename = "./assets/test.flac";
   const encoding = "FLAC";
   const sampleRateHertz = 44100;
